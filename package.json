@@ -1,0 +1,56 @@
+{
+  "name": "TestJsTemplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "tsc": "tsc",
+    "android": "adb reverse tcp:8081 tcp:8081 & react-native run-android",
+    "shake": "adb shell input keyevent 82",
+    "ios": "react-native run-ios",
+    "post_version": "react-native-version",
+    "reset_version": "react-native-version --reset-build --set-build 1",
+    "codepush_release": "appcenter codepush release-react -a thaitanloi365/MyApp",
+    "codepush_add_staging": "appcenter codepush deployment add -a thaitanloi365/TestJsTemplate-iOS Staging",
+    "codepush_create_android": "appcenter apps create -d TestJsTemplate-Android -o Android -p React-Native",
+    "codepush_create_ios": "appcenter apps create -d TestJsTemplate-iOS -o iOS -p React-Native",
+    "codepush_list_deployment": "appcenter codepush deployment list -a thaitanloi365/TestJsTemplate -k"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "moment": "^2.24.0",
+    "react": "16.8.3",
+    "react-native": "0.59.8",
+    "react-native-code-push": "^5.6.0",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-native-splash-screen": "^3.2.0",
+    "react-navigation": "^3.11.0",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "rn-components": "thaitanloi365/rn-components",
+    "rn-notifier": "thaitanloi365/rn-notifier",
+    "rn-rn-codepush-dialog": "thaitanloi365/rn-codepush-dialog"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/runtime": "^7.4.4",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "jest": "^24.8.0",
+    "metro-react-native-babel-preset": "^0.54.1",
+    "react-test-renderer": "16.8.3",
+    "redux-logger": "^3.0.6"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "Sources/Assets/Fonts"
+    ]
+  }
+}

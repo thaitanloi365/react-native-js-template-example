@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "allowUnreachableCode": false,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "allowUnusedLabels": false,
+    "module": "commonjs",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "strict": true,
+    "noUnusedParameters": true,
+    "noResolve": true,
+    "noUnusedLocals": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": false,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@App": ["Sources/App"],
+      "@Assets": ["Sources/Assets"],
+      "@Components": ["Sources/Components"],
+      "@Localization": ["Sources/Localization"],
+      "@Models": ["Sources/Models"],
+      "@Navigation": ["Sources/Navigation"],
+      "@ReduxManager": ["Sources/ReduxManager"],
+      "@Screens": ["Sources/Screens"],
+      "@Services": ["Sources/Services"],
+      "@Types": ["Sources/Types"],
+      "@Utils": ["Sources/Utils"],
+      "@Styles": ["Sourecs/Styles"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
